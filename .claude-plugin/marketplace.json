@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "brujula",
+  "description": "Un método de trabajo con IA para perfiles de gestión: ordenar la carpeta, trazar el recorrido de un trabajo y dejar un pedido claro para otro.",
+  "owner": {
+    "name": "Leopoldo Bini"
+  },
+  "plugins": [
+    {
+      "name": "rumbo",
+      "description": "Del pedido difuso al plano claro: reconocer la carpeta, trazar el mapa de decisiones y escribir el pedido para quien lo va a hacer.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Leopoldo Bini"
+      },
+      "source": "./plugins/rumbo",
+      "category": "productivity"
+    }
+  ]
+}
