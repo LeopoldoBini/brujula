@@ -9,7 +9,7 @@
     {
       "name": "rumbo",
       "description": "Del pedido difuso al plano claro: reconocer la carpeta, trazar el mapa de decisiones y escribir el pedido para quien lo va a hacer.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "Leopoldo Bini"
       },

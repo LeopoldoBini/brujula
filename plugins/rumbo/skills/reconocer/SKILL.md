@@ -6,9 +6,10 @@ disable-model-invocation: true
 
 Reconocer el terreno antes de caminarlo. La carpeta donde se abrió la sesión es el espacio de trabajo de una persona de gestión; este skill la deja lista para el resto de `rumbo`: con su índice, sus ajustes y una forma que cualquiera camina sin memoria.
 
-Leé primero, siempre, las dos reglas compartidas:
+Leé primero, siempre, las reglas compartidas:
 
 - `${CLAUDE_PLUGIN_ROOT}/reglas/carpeta.md`: la forma de la carpeta, los criterios y la prueba de la caminata. Es la vara de todo este skill.
+- `${CLAUDE_PLUGIN_ROOT}/reglas/flujo.md`: las líneas de "Cómo se trabaja acá" en el índice.
 - `${CLAUDE_PLUGIN_ROOT}/reglas/analogias.md`: cómo se explica cada concepto técnico la primera vez.
 
 Hablale a la persona en español rioplatense, de vos, en mensajes cortos, sin raya larga.

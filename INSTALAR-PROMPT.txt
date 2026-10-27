@@ -1,0 +1,13 @@
+Quiero instalar rumbo, un plugin con un método de trabajo, a nivel de usuario para tenerlo en todas mis carpetas. No soy programador: hacelo vos, explicame en una línea qué hace cada comando y pedime permiso antes de correrlo.
+
+1. Agregá el catálogo de plugins donde está publicado:
+claude plugin marketplace add LeopoldoBini/brujula
+
+2. Instalá el plugin desde ese catálogo:
+claude plugin install rumbo@brujula --scope user
+
+3. Verificá que "claude plugin list" muestre rumbo@brujula habilitado.
+
+No toques nada más que eso. Si algo falla, contame en una línea qué dijo y frená.
+
+Al terminar, decime: cerrá y volvé a abrir Claude Code, y escribí /rumbo:preparar

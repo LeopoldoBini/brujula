@@ -20,6 +20,8 @@ Sirven de punto de partida; si la persona trae una imagen propia de su trabajo, 
 | carpeta de contexto | el bibliorato con índice que le dejás a tu reemplazo para que siga sin llamarte |
 | índice (`CLAUDE.md`) | la carátula del bibliorato: dice qué hay adentro y en qué solapa |
 | skill | un instructivo escrito que el asistente sigue paso a paso cuando lo llamás por su nombre |
+| plugin | una caja de instructivos que se instala de una vez y trae varios skills |
+| CLAUDE.md de usuario | el reglamento interno: las instrucciones que tu asistente lee siempre, en cualquier carpeta |
 | ticket | un pedido en la mesa de entradas: una pregunta, con número, que se cierra cuando tiene respuesta |
 | mapa | la hoja de ruta de un trámite largo: qué ya se resolvió y qué falta |
 | plano | el pliego que le pasás a otro para que haga el trabajo sin tener que preguntarte |

@@ -7,14 +7,15 @@ Un método de trabajo con IA para gente de gestión y administración. Sirve par
 El recorrido completo, de izquierda a derecha:
 
 ```
-reconocer  ->  trazar  ->  plano
-                 |
-                 +-- cada pregunta del mapa se resuelve con
-                     preguntar, explorar o maqueta, y se vuelve a trazar
+preparar (una vez)  ->  reconocer  ->  trazar  ->  plano
+                                           |
+                                           +-- cada pregunta del mapa se resuelve con
+                                               preguntar, explorar o maqueta, y se vuelve a trazar
 ```
 
 | Skill | Qué hace |
 |---|---|
+| `/rumbo:preparar` | Lo primero después de instalar: revisa lo que ya tenés, te ofrece sacar lo que se superpone y le enseña a tu Claude cuándo sugerirte cada comando |
 | `/rumbo:reconocer` | Arma tu carpeta de trabajo, o la revisa y la ordena |
 | `/rumbo:trazar` | Convierte una idea confusa en un mapa: qué hay que resolver y en qué orden. Llamado de nuevo, pasa al mapa lo resuelto y te dice qué sigue |
 | `/rumbo:preguntar` | Te hace las preguntas justas, cada una con una respuesta recomendada, y deja las decisiones escritas. También arma un cuestionario para otra persona |
@@ -24,18 +25,20 @@ reconocer  ->  trazar  ->  plano
 
 El recorrido termina en el plano: hacer el trabajo queda afuera de esta versión.
 
-Ningún skill se activa solo: corren únicamente cuando los llamás por su nombre.
+Ningún skill se activa solo: corren únicamente cuando los llamás por su nombre. `/rumbo:preparar` deja escrito en tus instrucciones generales cuándo conviene cada uno, así tu Claude te lo sugiere.
 
 ## Instalar
 
-En Claude Code:
+En la terminal:
 
 ```
-/plugin marketplace add <ruta-o-repo-de-brujula>
-/plugin install rumbo@brujula
+claude plugin marketplace add LeopoldoBini/brujula
+claude plugin install rumbo@brujula
 ```
 
-Después, abrí Claude Code en tu carpeta de trabajo y escribí `/rumbo:reconocer`.
+Cerrá y volvé a abrir Claude Code, y escribí `/rumbo:preparar`. Después, abrí Claude Code en tu carpeta de trabajo y escribí `/rumbo:reconocer`.
+
+Si preferís que lo instale tu Claude, pegale el texto de [`INSTALAR-PROMPT.txt`](INSTALAR-PROMPT.txt).
 
 ## Licencia
 

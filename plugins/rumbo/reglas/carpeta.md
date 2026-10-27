@@ -28,6 +28,7 @@ Cada carpeta se crea **cuando hace falta**, el día que llega su primer archivo.
 
 | Skill | Escribe en |
 |---|---|
+| `preparar` | el bloque de `rumbo` en el CLAUDE.md de usuario, fuera de la carpeta |
 | `reconocer` | `CLAUDE.md`, `_rumbo.md`, la forma de la carpeta |
 | `trazar` | `trabajos/<tema>/MAPA.md` y sus tickets; suma la fila del trabajo en `CLAUDE.md` |
 | `preguntar` | la respuesta, dentro del ticket que resolvió; un cuestionario, en `trabajos/<tema>/cuestionarios/<para-quien>.md` |
@@ -62,10 +63,10 @@ El catálogo de la biblioteca. El nombre lo pone Claude Code, que lo lee solo al
 
 ## Cómo se trabaja acá
 
-Se arranca con `/rumbo:reconocer`; un trabajo nuevo se abre con `/rumbo:trazar`.
+<las líneas de flujo.md, tal cual>
 ```
 
-Las filas se escriben solo para lo que existe. La tabla de trabajos aparece con el primer trabajo.
+Las filas se escriben solo para lo que existe. La tabla de trabajos aparece con el primer trabajo. "Cómo se trabaja acá" lleva las líneas de [`flujo.md`](flujo.md) copiadas sin retocar.
 
 ## Los ajustes: `_rumbo.md`
 
@@ -111,5 +112,6 @@ Una carpeta está bien armada cuando alguien sin memoria la camina así:
 
 - Abre `CLAUDE.md` y, con a lo sumo dos lecturas más, sabe dónde está y adónde ir.
 - Cada carpeta de primer nivel figura en `CLAUDE.md`, y todo lo que `CLAUDE.md` nombra existe.
+- "Cómo se trabaja acá" dice lo mismo que [`flujo.md`](flujo.md).
 - El estado de cada trabajo se lee en la primera línea de su `MAPA.md`.
 - Ningún dato está en dos lugares, y ninguna clave está escrita en un archivo.
