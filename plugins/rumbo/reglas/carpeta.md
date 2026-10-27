@@ -17,6 +17,7 @@ La imagen que guía todo: una **biblioteca**. Hay un catálogo chico que dice d�
 │     ├─ tickets/     una pregunta por archivo (modo archivos)
 │     ├─ hallazgos/   lo que trajo explorar
 │     ├─ maquetas/    lo que armó maqueta
+│     ├─ cuestionarios/  lo que preguntar le manda a otra persona
 │     └─ PLANO.md     el pedido final para otro (lo escribe plano)
 └─ _archivo/          lo que ya no se usa, guardado en vez de borrado
 ```
@@ -29,7 +30,7 @@ Cada carpeta se crea **cuando hace falta**, el día que llega su primer archivo.
 |---|---|
 | `reconocer` | `CLAUDE.md`, `_rumbo.md`, la forma de la carpeta |
 | `trazar` | `trabajos/<tema>/MAPA.md` y sus tickets; suma la fila del trabajo en `CLAUDE.md` |
-| `preguntar` | la respuesta, dentro del ticket que resolvió |
+| `preguntar` | la respuesta, dentro del ticket que resolvió; un cuestionario, en `trabajos/<tema>/cuestionarios/<para-quien>.md` |
 | `explorar` | `trabajos/<tema>/hallazgos/<pregunta>.md`, enlazado desde el ticket |
 | `maqueta` | `trabajos/<tema>/maquetas/`, enlazado desde el ticket |
 | `plano` | `trabajos/<tema>/PLANO.md` |

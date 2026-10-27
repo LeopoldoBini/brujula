@@ -8,17 +8,21 @@ El recorrido completo, de izquierda a derecha:
 
 ```
 reconocer  ->  trazar  ->  plano
-               (usa preguntar, explorar y maqueta)
+                 |
+                 +-- cada pregunta del mapa se resuelve con
+                     preguntar, explorar o maqueta, y se vuelve a trazar
 ```
 
-| Skill | Qué hace | Estado |
-|---|---|---|
-| `/rumbo:reconocer` | Arma tu carpeta de trabajo, o la revisa y la ordena | disponible |
-| `/rumbo:trazar` | Dibuja el mapa de un trabajo: qué hay que decidir y en qué orden | próximamente |
-| `/rumbo:preguntar` | Te hace las preguntas justas para cerrar una decisión | próximamente |
-| `/rumbo:explorar` | Investiga un dato que hace falta para decidir | próximamente |
-| `/rumbo:maqueta` | Arma un borrador rápido para reaccionar sobre algo concreto | próximamente |
-| `/rumbo:plano` | Escribe el pedido final para quien lo va a hacer | próximamente |
+| Skill | Qué hace |
+|---|---|
+| `/rumbo:reconocer` | Arma tu carpeta de trabajo, o la revisa y la ordena |
+| `/rumbo:trazar` | Convierte una idea confusa en un mapa: qué hay que resolver y en qué orden. Llamado de nuevo, pasa al mapa lo resuelto y te dice qué sigue |
+| `/rumbo:preguntar` | Te hace las preguntas justas, cada una con una respuesta recomendada, y deja las decisiones escritas. También arma un cuestionario para otra persona |
+| `/rumbo:explorar` | Averigua un dato que hace falta y lo deja escrito con sus fuentes |
+| `/rumbo:maqueta` | Arma un borrador descartable (pantalla, circuito o planilla) para ver si la idea cierra |
+| `/rumbo:plano` | Escribe el pedido final para quien lo va a hacer, con criterios para saber cuándo está terminado |
+
+El recorrido termina en el plano: hacer el trabajo queda afuera de esta versión.
 
 Ningún skill se activa solo: corren únicamente cuando los llamás por su nombre.
 

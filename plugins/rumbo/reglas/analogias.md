@@ -23,6 +23,14 @@ Sirven de punto de partida; si la persona trae una imagen propia de su trabajo, 
 | ticket | un pedido en la mesa de entradas: una pregunta, con número, que se cierra cuando tiene respuesta |
 | mapa | la hoja de ruta de un trámite largo: qué ya se resolvió y qué falta |
 | plano | el pliego que le pasás a otro para que haga el trabajo sin tener que preguntarte |
+| frente | la bandeja de lo que se puede despachar hoy: lo que no espera la firma de nadie |
+| niebla | lo que sabés que va a venir en el trámite pero todavía no se puede pedir con precisión |
+| maqueta | la maqueta del arquitecto: de cartón, para ver si la idea cierra antes de construir |
+| hallazgo | el informe de lo que averiguaste, con la fuente de cada dato, como un dictamen con sus citas |
+| cuestionario | el formulario que le mandás a otra área para que te conteste lo que solo ella sabe |
+| criterio de terminado | la lista de control de la recepción de una obra: cada punto se mira y es sí o no |
+| HTML | una página como las de internet, guardada en un archivo que se abre con doble clic |
+| CSV | una planilla en texto común: cada renglón una fila, las columnas separadas por punto y coma |
 | Markdown | texto común con algunas marcas (`#` para títulos, `-` para listas) que se lee igual con o sin programa |
 | git | un sistema que saca una foto fechada de toda la carpeta cada vez que se lo pedís |
 | commit | una de esas fotos, con una nota de qué cambió, como el sello de "recibido" con fecha |
