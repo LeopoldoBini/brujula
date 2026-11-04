@@ -29,16 +29,24 @@ Ningún skill se activa solo: corren únicamente cuando los llamás por su nombr
 
 ## Instalar
 
-En la terminal:
+**En la app de escritorio de Claude** (sin terminal):
+
+1. Entrá a **Personalizar** (Customize) > **Plugins** > **Agregar** > **Agregar marketplace** y pegá `LeopoldoBini/brujula`.
+2. Instalá `rumbo` desde ese marketplace.
+3. En la pestaña **Code**, abrí una sesión nueva, elegí cualquier carpeta y escribí `/rumbo:preparar`.
+
+Si en el paso 1 no aparece la opción, en una sesión de **Code** tocá el botón **+** junto al cuadro de texto > **Agregar plugins** y buscá el marketplace ahí.
+
+**En la terminal**:
 
 ```
 claude plugin marketplace add LeopoldoBini/brujula
-claude plugin install rumbo@brujula
+claude plugin install rumbo@brujula --scope user
 ```
 
-Cerrá y volvé a abrir Claude Code, y escribí `/rumbo:preparar`. Después, abrí Claude Code en tu carpeta de trabajo y escribí `/rumbo:reconocer`.
+Cerrá y volvé a abrir Claude Code, y escribí `/rumbo:preparar`. Si preferís que lo instale tu Claude, pegale el texto de [`INSTALAR-PROMPT.txt`](INSTALAR-PROMPT.txt) (solo sirve en la terminal).
 
-Si preferís que lo instale tu Claude, pegale el texto de [`INSTALAR-PROMPT.txt`](INSTALAR-PROMPT.txt).
+Después, en los dos casos: una sesión nueva sobre tu carpeta de trabajo, y `/rumbo:reconocer`.
 
 ## Licencia
 

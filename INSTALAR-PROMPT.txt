@@ -1,3 +1,5 @@
+Este texto es para Claude Code en la terminal. Si usás la app de escritorio, seguí los pasos de "En la app de escritorio" del README.
+
 Quiero instalar rumbo, un plugin con un método de trabajo, a nivel de usuario para tenerlo en todas mis carpetas. No soy programador: hacelo vos, explicame en una línea qué hace cada comando y pedime permiso antes de correrlo.
 
 1. Agregá el catálogo de plugins donde está publicado:
