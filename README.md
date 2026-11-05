@@ -33,7 +33,7 @@ Ningún skill se activa solo: corren únicamente cuando los llamás por su nombr
 
 1. Entrá a **Personalizar** (Customize) > **Plugins** > **Agregar** > **Agregar marketplace** y pegá `LeopoldoBini/brujula`.
 2. Instalá `rumbo` desde ese marketplace.
-3. En la pestaña **Code**, abrí una sesión nueva, elegí cualquier carpeta y escribí `/rumbo:preparar`.
+3. En la pestaña **Code**, abrí una sesión nueva, elegí cualquier carpeta y escribí `/rumbo:preparar`. Si ya tenías una sesión abierta, `/reload-plugins` lo trae sin abrir otra.
 
 Si en el paso 1 no aparece la opción, en una sesión de **Code** tocá el botón **+** junto al cuadro de texto > **Agregar plugins** y buscá el marketplace ahí.
 
