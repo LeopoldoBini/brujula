@@ -29,13 +29,7 @@ Ningún skill se activa solo: corren únicamente cuando los llamás por su nombr
 
 ## Instalar
 
-**En la app de escritorio de Claude** (sin terminal):
-
-1. Entrá a **Personalización** (Customize) > **Plugins** > **Agregar** > **Agregar marketplace** > **Agregar desde un repositorio**. En el campo pegá `LeopoldoBini/brujula`, apretá Enter y tocá **Sincronizar**.
-2. En **Descubrir**, buscá **Rumbo** (aparece en "Plugins nuevos"), abrilo y tocá **Agregar**. Si después de sincronizar ves "No hay nada nuevo para agregar", volvé a **Descubrir**: tarda unos segundos en aparecer.
-3. En la pestaña **Code**, abrí una sesión nueva, elegí cualquier carpeta y escribí `/rumbo:preparar`. Si ya tenías una sesión abierta, `/reload-plugins` lo trae sin abrir otra.
-
-Si en el paso 1 no aparece la opción, en una sesión de **Code** tocá el botón **+** junto al cuadro de texto > **Agregar plugins** y buscá el marketplace ahí.
+**En la app de escritorio de Claude** (sin terminal): seguí el [paso a paso con capturas](docs/instalar-en-la-app.md). En corto: **Personalización** > **Plugins** > **Agregar** > **Agregar marketplace** > **Agregar desde un repositorio**, pegá `LeopoldoBini/brujula` y tocá **Sincronizar**; en **Descubrir**, abrí **Rumbo** y tocá **Agregar**; en **Code**, una sesión nueva y `/rumbo:preparar`.
 
 **En la terminal**:
 
