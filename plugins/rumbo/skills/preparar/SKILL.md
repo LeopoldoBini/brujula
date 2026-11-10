@@ -19,8 +19,12 @@ Hablale en español rioplatense, de vos, en mensajes cortos, sin raya larga. Est
 - **Sistema operativo**: el de tu entorno.
 - **Carpeta de configuración**: la de la variable `CLAUDE_CONFIG_DIR` si está definida (`echo $CLAUDE_CONFIG_DIR`; en Windows, `$env:CLAUDE_CONFIG_DIR`); si no, `~/.claude` (en Windows, `%USERPROFILE%\.claude`). Todo lo que sigue se busca ahí.
 - **CLAUDE.md de usuario**: `<configuración>/CLAUDE.md`. Si existe, leelo: cuántas líneas tiene y si ya trae un bloque entre `<!-- rumbo:inicio -->` y `<!-- rumbo:fin -->`.
-- **Dónde corre**: probá `claude --version`. Si responde, es la terminal. Si no, es la app de escritorio, que trae Claude Code adentro sin el comando `claude`: ahí todo lo de plugins se lee de los archivos y se cambia desde la app.
-- **Plugins**: con el comando, `claude plugin list --json`; en la app, `<configuración>/plugins/installed_plugins.json`. De cada uno habilitado, mirá los nombres y las descripciones de sus skills (`<installPath>/skills/*/SKILL.md`).
+- **Comando `claude`**: probá `claude --version`. Si responde, con él se leen y se sacan los plugins de la terminal.
+- **Plugins**: hay dos juegos, y una sesión de la app de escritorio carga los dos. Mirá siempre ambos:
+  - **De la terminal**: con el comando, los habilitados de `claude plugin list --json`; sin él, los de `<configuración>/plugins/installed_plugins.json`, menos los que figuran en `false` en `enabledPlugins` de `<configuración>/settings.json`. Skills en `<installPath>/skills/*/SKILL.md`.
+  - **De la app**: en Mac, cada `~/Library/Application Support/Claude/local-agent-mode-sessions/*/*/rpm/manifest.json` (el **manifest de la app**). Cuentan todos los de su lista `plugins`, cada uno con `id` y `name`. Skills en `<carpeta del manifest>/<id>/skills/*/SKILL.md`. En otro sistema, preguntale si usa la app y, si la usa, que te lea la lista de **Personalización** > **Plugins** > **Tuyos**.
+
+  De cada plugin, salvo `rumbo`, mirá los nombres y las descripciones de sus skills.
 - **Skills sueltos**: cada `<configuración>/skills/*/SKILL.md`, con su nombre y descripción.
 
 Un plugin o skill es **superpuesto** cuando hace el mismo trabajo que un comando de `rumbo`. Los conocidos:
@@ -32,7 +36,7 @@ Un plugin o skill es **superpuesto** cuando hace el mismo trabajo que un comando
 
 Otros cuentan si su descripción promete lo mismo: ordenar una carpeta de trabajo, entrevistar sobre un plan, convertir una idea en un mapa de tareas, investigar con fuentes, armar un prototipo descartable, escribir una especificación o un cuestionario.
 
-Terminado cuando sabés el sistema, dónde corre, la ruta del CLAUDE.md de usuario y su estado, y tenés la lista de superpuestos (o sabés que no hay).
+Terminado cuando sabés el sistema, si está el comando, la ruta del CLAUDE.md de usuario y su estado, y recorriste los dos juegos de plugins y los skills sueltos con su lista de superpuestos (o sabés que no hay).
 
 ## 2. Diagnóstico y ronda
 
@@ -41,7 +45,7 @@ Dale el diagnóstico en tres o cuatro líneas: sistema, estado de sus instruccio
 Después, una ronda según `rondas.md`:
 
 - **Una pregunta por cada superpuesto**: sacarlo o quedárselo. Recomendá sacarlo, con la imagen de los dos instructivos para el mismo trámite. Si el plugin trae también skills que no se superponen, nombralos: se van con él. Incluí el comando exacto:
-  - Plugin, en la terminal: `claude plugin uninstall <id> --scope <scope>`, con el `id` y el `scope` que dio la lista. En la app: lo saca la persona, desde el botón **+** junto al cuadro de texto, en la parte de plugins; guiala un paso por vez.
+  - Plugin de la terminal: con el comando, `claude plugin uninstall <id> --scope <scope>`, con el `id` y el `scope` que dio la lista; sin él, se desactiva poniendo `"<id>": false` en `enabledPlugins` de `<configuración>/settings.json`, y el resto del archivo queda como estaba. Plugin de la app: lo saca la persona en **Personalización** > **Plugins** > **Tuyos**, menú **⋯** del plugin > **Quitar**; guiala un paso por vez.
   - Skill suelto: se archiva, no se borra. Mac o Linux: `mkdir -p <configuración>/skills-archivados && mv <configuración>/skills/<nombre> <configuración>/skills-archivados/`. Windows (PowerShell): `New-Item -ItemType Directory -Force <configuración>\skills-archivados; Move-Item <configuración>\skills\<nombre> <configuración>\skills-archivados\`.
 - **El bloque**: mostralo entero, tal como va a quedar, y preguntá si lo escribís. Recomendá que sí. Decí que va al final del archivo, que lo demás no se toca, y que se quita borrando lo que hay entre las dos marcas.
 
@@ -65,7 +69,7 @@ Terminado cuando la persona contestó cada pregunta de la ronda.
 
 Solo lo que aceptó:
 
-- Cada superpuesto que aceptó sacar: corré su comando (o guiala en la app) y verificá que ya no figure en la lista de plugins de la sección 1, o que la carpeta esté en `skills-archivados`.
+- Cada superpuesto que aceptó sacar: aplicá lo de su tipo según la sección 2 y verificalo. Plugin de la terminal: releído como en la sección 1, ya no figura habilitado. Plugin de la app: la persona confirma que ya no está en **Tuyos**. Skill suelto: la carpeta está en `skills-archivados`.
 - El bloque: si el archivo no existe, crealo con el bloque solo. Si existe sin bloque, sumalo al final, separado por una línea en blanco. Si ya tenía bloque, reemplazá lo que hay entre las marcas, marcas incluidas. El resto del archivo queda byte por byte como estaba.
 
 Releé el archivo y comprobá que hay exactamente un `<!-- rumbo:inicio -->` y un `<!-- rumbo:fin -->`.
@@ -74,4 +78,4 @@ Terminado cuando cada sí quedó aplicado y verificado, y cada no quedó sin toc
 
 ## 4. Cierre
 
-En pocas líneas: qué quedó instalado, qué se sacó y qué cambió en sus instrucciones generales. Si se sacó algo o se escribió el bloque, los cambios se ven en una sesión nueva (en la terminal, cerrando y volviendo a abrir Claude Code). El siguiente paso: una sesión nueva sobre su carpeta de trabajo, y escribir `/rumbo:reconocer`.
+En pocas líneas: qué quedó instalado, qué se sacó y qué cambió en sus instrucciones generales. Si se sacó algo o se escribió el bloque, los cambios se ven en una sesión nueva (en la terminal, cerrando y volviendo a abrir Claude Code; en la app, abriendo una sesión nueva en **Code**). El siguiente paso: una sesión nueva sobre su carpeta de trabajo, y escribir `/rumbo:reconocer`.
