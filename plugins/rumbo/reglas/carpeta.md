@@ -110,8 +110,8 @@ Lo que el método sabe de esta persona y de esta carpeta. Lo leen todos los skil
 ---
 tickets: archivos        # archivos | github
 repo:                    # solo en modo github: dueño/nombre del repo privado
-forma: []                # la forma de la raíz, de formas.md; varias si se componen
-cajones: {}              # con centro de comando, la forma de cada cajón: `soporte: [paraguas]`
+forma: []                # la raíz: linea | paraguas | fichas | conocimiento | mapa-organizacion | mapa-sistema. Con cajones, paraguas
+cajones: {}              # la forma de cada cajón, con los mismos valores: `tickets: [paraguas]`, `clientes: [fichas]`
 ya_conoce: []            # conceptos que no hace falta volver a explicar
 ---
 
