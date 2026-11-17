@@ -56,6 +56,17 @@ Cerrá y volvé a abrir Claude Code, y escribí `/rumbo:preparar`. Si preferís 
 
 Después, en los dos casos: una sesión nueva sobre tu carpeta de trabajo, y `/rumbo:reconocer`.
 
+### Si ya tenías rumbo
+
+rumbo no se actualiza solo. En la terminal:
+
+```
+claude plugin marketplace update brujula
+claude plugin update rumbo@brujula
+```
+
+En la app de escritorio, abrí Rumbo en **Personalización** > **Plugins** y actualizalo; si no cambia, quitalo y volvé a agregarlo. Después, en una sesión nueva, corré otra vez `/rumbo:preparar` y, sobre tu carpeta, `/rumbo:reconocer`: te muestra qué le falta a la carpeta y no cambia nada sin tu sí.
+
 ## Licencia
 
 MIT. Ver `plugins/rumbo/LICENSE` y `plugins/rumbo/AVISOS-DE-TERCEROS.md`.

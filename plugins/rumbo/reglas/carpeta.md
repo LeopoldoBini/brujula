@@ -111,7 +111,7 @@ Lo que el método sabe de esta persona y de esta carpeta. Lo leen todos los skil
 tickets: archivos        # archivos | github
 repo:                    # solo en modo github: dueño/nombre del repo privado
 forma: []                # la raíz: linea | paraguas | fichas | conocimiento | mapa-organizacion | mapa-sistema. Con cajones, paraguas
-cajones: {}              # la forma de cada cajón, con los mismos valores: `tickets: [paraguas]`, `clientes: [fichas]`
+cajones: {}              # la forma de cada cajón, con los mismos valores: `soporte: [paraguas]`, `clientes: [fichas]`
 ya_conoce: []            # conceptos que no hace falta volver a explicar
 ---
 
@@ -122,6 +122,7 @@ ya_conoce: []            # conceptos que no hace falta volver a explicar
 ## Dónde va cada cosa nueva
 
 Lo que se repite acá: <en palabras de la persona>.
+Lo que también hace: <cosas de otro tipo que nombró y todavía no tienen cajón; omitir si no hay>.
 
 | Cosa nueva | Dónde va | Cómo se nombra |
 |---|---|---|
@@ -154,7 +155,7 @@ Antes de mover o renombrar un archivo:
 2. Fijate si en el destino ya existe un archivo con el mismo nombre, sin distinguir mayúsculas: en Mac y Windows `mapa.md` y `MAPA.md` son el mismo y uno pisa al otro.
 3. Mostrale a la persona la lista `de → a → por qué → quién lo nombra` y esperá su sí.
 
-Una herramienta que se muda puede dejar de encontrar sus archivos: después de moverla, correla en modo de solo mirar y comprobá que lee lo mismo que antes.
+Una herramienta que se muda puede dejar de encontrar sus archivos. Después de moverla, comprobá que lee lo mismo que antes solo si tiene una manera de correr que nada más lee (no escribe, no manda, no borra). Si no la tiene, o no estás seguro, no la corras: revisá las rutas que usa y pedile a la persona que la pruebe con un caso.
 
 ## La prueba de la caminata
 
@@ -162,7 +163,7 @@ Una carpeta está bien armada cuando alguien sin memoria la camina así:
 
 - Abre `CLAUDE.md` y, con a lo sumo dos lecturas más, sabe dónde está y adónde ir.
 - Cada carpeta de primer nivel figura en `CLAUDE.md`, y todo lo que `CLAUDE.md` nombra existe.
-- Cada fila de "Qué sabe hacer esta carpeta" lleva a un procedimiento que dice cuándo se usa, qué hace falta, los pasos y qué revisa la persona.
+- Cada fila de "Qué sabe hacer esta carpeta" lleva a un procedimiento que dice cuándo se usa, qué hace falta, los pasos y qué revisa la persona, o a un `LEEME.md` cuya tabla lleva a esos procedimientos.
 - `_rumbo.md` dice la forma y dónde va cada cosa nueva, y lo que hay en la parte propia está donde esa tabla dice.
 - Con cajones: cada uno figura en el índice con su asunto, tiene su `LEEME.md`, y desde el índice se llega a cualquier procedimiento en dos lecturas.
 - "Cómo crece esta carpeta" dice lo mismo que [`crecer.md`](crecer.md), y "Cómo se trabaja acá" lo mismo que [`flujo.md`](flujo.md).

@@ -72,7 +72,7 @@ Terminado cuando leíste todo lo del trabajo y sabés para quién se escribe y q
 
 "Para quién" es largo: un renglón por cada rol y cada cosa que necesita, cubriendo todo lo decidido. Cada **criterio de terminado** pasa la prueba de la recepción de obra: alguien distinto de quien hizo el trabajo puede decir sí o no mirando algo concreto (un documento, un registro, un caso de prueba recorrido de punta a punta). "Que funcione bien" no pasa; "un pedido urgente cargado a las 10 figura en farmacia antes de las 11" sí. Si lo recibe un agente, cada criterio dice quién lo comprueba: el agente, o la persona después.
 
-Cuando lo hace el asistente de esta carpeta, "Cuándo está terminado" cierra con dos criterios fijos: el procedimiento y su herramienta quedaron guardados donde dice `_rumbo.md`, con su fila en "Qué sabe hacer esta carpeta" del índice; y una sesión nueva atiende un caso de prueba con solo nombrarlo.
+Cuando lo hace el asistente de esta carpeta, "Cuándo está terminado" cierra con dos criterios fijos: el procedimiento, y su herramienta si lleva, quedaron guardados donde dice `_rumbo.md`, con su fila en "Qué sabe hacer esta carpeta" del índice; y una sesión nueva atiende un caso de prueba con solo nombrarlo.
 
 Terminado cuando cada ticket cerrado está reflejado en alguna sección, cada criterio dice cómo se comprueba, y lo abierto figura en "Lo que no está decidido".
 

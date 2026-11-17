@@ -134,12 +134,13 @@ Una persona hace cosas de distinto tipo. Su carpeta sigue siendo una sola, que a
 - **Se arranca con una forma, sin cajones.** El segundo cajón aparece el día que la persona atiende algo de otro tipo: otra cosa es lo que se repite. Ahí se le propone pasar lo que había a un cajón, abrir otro para lo nuevo, y dejar la raíz como centro de comando.
 - **La forma de cada cajón se elige igual que la de la raíz**: por lo que se repite ahí adentro. Un cajón puede ser una línea, otro una biblioteca de fichas, otro un paraguas chico.
 - **Cada nivel tiene su catálogo chico**: el índice en la raíz, un `LEEME.md` en cada cajón. El de arriba dice para qué asunto es cada cajón, enlaza hacia abajo y ahí frena.
+- **"Centro de comando" es cómo se le cuenta a la persona, no un valor.** En `_rumbo.md` la raíz queda `forma: [paraguas]` y cada cajón va en `cajones` con uno de los seis valores.
 
 Las formas también se anidan adentro de un cajón: fichas que llevan una línea, un paraguas cuya `base/` es un cuerpo de conocimiento.
 
 ## Guardas
 
-- **Lo mínimo que carga el trabajo.** Se crea lo que hoy recibe un archivo. Lo demás queda anotado en "Cómo crece esta carpeta" de `_rumbo.md`, para el día que llegue.
+- **Lo mínimo que carga el trabajo.** Se crea lo que hoy recibe un archivo. Lo demás queda anotado en "Dónde va cada cosa nueva" de `_rumbo.md`, para el día que llegue.
 - **Una forma se confirma a la tercera.** La primera vez de algo es un archivo. Cuando la misma clase de cosa apareció tres veces, se saca su modelo a `_modelos/` y las tres se emparejan.
 - **La escalera.** Primero se atiende charlando; lo que vuelve se escribe como procedimiento; una herramienta se arma cuando el procedimiento ya se repitió y un paso es mecánico.
 - **Si todo entra en un procedimiento**, la carpeta es el índice más ese archivo.

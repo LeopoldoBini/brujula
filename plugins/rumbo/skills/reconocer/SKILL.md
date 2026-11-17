@@ -22,7 +22,7 @@ Recorré la carpeta: el árbol completo hasta tres niveles (sin entrar a `.git`)
 Clasificá la carpeta en uno de dos casos:
 
 - **Nueva**: vacía, o con pocos archivos sueltos y ninguna forma. Seguí en 2A.
-- **Con historia**: tiene carpetas propias o mucho material. Seguí en 2B.
+- **Con historia**: tiene carpetas propias o mucho material, o ya tiene `_rumbo.md` o un `CLAUDE.md` (aunque no haya nada más: alguien ya la armó o la editó). Seguí en 2B.
 
 Terminado cuando podés describir en dos líneas qué hay en la carpeta y a qué caso pertenece.
 
@@ -40,6 +40,8 @@ Con la respuesta 2, elegí la forma según `formas.md`. Si no alcanza para elegi
 - `_rumbo.md`, con `forma` y la tabla "Dónde va cada cosa nueva": una fila por cada clase de cosa que nombró, con el lugar que le da la forma y un nombre de su oficina.
 - `CLAUDE.md`, con "Cómo crece esta carpeta" y "Cómo se trabaja acá" copiadas sin retocar.
 
+En `_rumbo.md` copiá también los comentarios del modelo: son los que dicen qué valores admite cada campo. Un archivo que ya existe nunca se reemplaza: se completa conservando lo que tiene, y antes de guardar se le muestra a la persona qué cambia y se espera su sí.
+
 Si había archivos sueltos, ubicalos con el mismo criterio que en 2B (mostrando la lista antes de mover). Las carpetas se crean solo si les toca algún archivo hoy: en una carpeta vacía, la forma queda anotada en la tabla y se va armando con cada cosa que se atiende. El trabajo que nombró la persona queda anotado en `CLAUDE.md` como próximo paso, y su carpeta la crea `trazar`.
 
 Terminado cuando existen `CLAUDE.md` y `_rumbo.md` con lo que dijo la persona, `_rumbo.md` dice la forma y dónde va cada cosa que nombró, y no hay carpetas vacías.
@@ -47,7 +49,7 @@ Terminado cuando existen `CLAUDE.md` y `_rumbo.md` con lo que dijo la persona, `
 ## 2B. Revisar (carpeta con historia)
 
 1. **Inventario.** Cada archivo o carpeta de primer nivel, y lo que haya adentro que no se entienda por el nombre, en uno de estos papeles: *índice* (`CLAUDE.md` o lo que hace de índice), *fijo* (vale siempre: un procedimiento, un modelo, reglas, una herramienta), *de cada vez* (salió de un caso o de una corrida), *trabajo* (de un asunto puntual, con principio y fin), *viejo* (sin uso, duplicado o reemplazado), *clave* (tiene contraseñas, tokens o datos de acceso). Leé lo suficiente para clasificar con fundamento, no por el nombre solo.
-2. **La forma que ya tiene.** Una carpeta con historia casi siempre esconde una forma que creció sin esqueleto. Mirando el inventario, contestá para vos qué es lo que se repite acá y qué forma de `formas.md` le corresponde, y confirmalo con la persona en una pregunta, en sus palabras ("¿esto es una carpeta por cliente, y adentro siempre lo mismo?"). Se ordena hacia esa forma; cambiarla por otra se propone solo si la que tiene no carga el trabajo. Si adentro conviven asuntos de distinto tipo, la forma escondida es un centro de comando: cada asunto es un cajón con su propia forma ("Cajones" de `carpeta.md`, con su pregunta de quién más ve la carpeta).
+2. **La forma que ya tiene.** Una carpeta con historia casi siempre esconde una forma que creció sin esqueleto. Mirando el inventario, contestá para vos qué es lo que se repite acá y qué forma de `formas.md` le corresponde, y confirmalo con la persona en una pregunta, en sus palabras ("¿esto es una carpeta por cliente, y adentro siempre lo mismo?"). Se ordena hacia esa forma; cambiarla por otra se propone solo si la que tiene no carga el trabajo. Si adentro conviven asuntos de distinto tipo, lo que esconde son cajones: cada asunto es un cajón con su propia forma y la raíz queda como `paraguas` ("Cajones" de `carpeta.md`, con su pregunta de quién más ve la carpeta). Una carpeta armada con una versión anterior de `rumbo` (tiene `referencia/`, o su índice no tiene "Cómo crece esta carpeta") se trata igual que cualquier otra con historia: lo que le falta va a "Qué falta" de la devolución, y nada de lo que tiene se toca sin el sí.
 3. **Contraste.** Pasá la carpeta por cada criterio de `carpeta.md` y por la prueba de la caminata. Cada incumplimiento es un hallazgo.
 4. **Devolución.** Mostrale a la persona, en este orden:
    - Lo urgente primero, con su propio título: cualquier archivo con claves. Nombrá el archivo y qué tipo de dato tiene, **nunca el valor**, y proponé pasarlo al gestor de contraseñas.
@@ -73,7 +75,7 @@ Terminado cuando `_rumbo.md` dice el modo, y en modo GitHub el repo existe, es p
 
 ## 4. Cierre
 
-1. Caminá la carpeta como alguien sin memoria, con la prueba de `carpeta.md`. Lo que falle, arreglalo antes de cerrar.
+1. Caminá la carpeta como alguien sin memoria, con la prueba de `carpeta.md`. Lo que falle y la persona todavía no vio, mostráselo y esperá su sí antes de arreglarlo. Lo que ya rechazó y quedó anotado en `_rumbo.md` no cuenta como falla y no se toca.
 2. Dale a la persona el árbol final en pocas líneas, qué cambió, y los dos caminos que siguen: para algo que le llega y se repite, abrir una sesión acá y decir "atendamos esto"; para una idea grande o confusa, `/rumbo:trazar`.
 
-Terminado cuando la prueba de la caminata pasa entera y la persona tiene el árbol y el siguiente paso.
+Terminado cuando cada falla de la caminata quedó arreglada con su sí o rechazada y anotada, y la persona tiene el árbol y el siguiente paso.
