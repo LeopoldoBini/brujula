@@ -1,6 +1,6 @@
 ---
 name: plano
-description: Junta el mapa, las decisiones, los hallazgos y las maquetas en el pedido que le pasás a otro (persona o agente) para que haga el trabajo sin volver a preguntarte.
+description: Junta el mapa, las decisiones, los hallazgos y las maquetas en el pedido que le pasás a otro (una persona, un agente o tu propio asistente) para que haga el trabajo sin volver a preguntarte.
 disable-model-invocation: true
 ---
 
@@ -22,7 +22,7 @@ Fijate si el camino está despejado:
 - Si el mapa termina en algo más chico que un plano, decíselo y preguntale si igual lo quiere.
 - Si quedan tickets abiertos o niebla, o hay tickets cerrados que no figuran en el mapa, nombralos por su pregunta y preguntale: resolverlos primero (recomendado) o escribir el plano igual, con eso como supuesto declarado.
 
-Si el mapa todavía no dice quién lo va a hacer, una pregunta: una persona (qué rol, qué sabe del tema), un agente, o todavía no se sabe. De eso depende cuánto contexto lleva el plano.
+Si el mapa termina en que la carpeta lo aprenda, lo hace el asistente en esta misma carpeta. Si no, y el mapa todavía no dice quién lo va a hacer, una pregunta: una persona (qué rol, qué sabe del tema), un agente, o todavía no se sabe. De eso depende cuánto contexto lleva el plano.
 
 Terminado cuando leíste todo lo del trabajo y sabés para quién se escribe y qué entra como supuesto.
 
@@ -72,6 +72,8 @@ Terminado cuando leíste todo lo del trabajo y sabés para quién se escribe y q
 
 "Para quién" es largo: un renglón por cada rol y cada cosa que necesita, cubriendo todo lo decidido. Cada **criterio de terminado** pasa la prueba de la recepción de obra: alguien distinto de quien hizo el trabajo puede decir sí o no mirando algo concreto (un documento, un registro, un caso de prueba recorrido de punta a punta). "Que funcione bien" no pasa; "un pedido urgente cargado a las 10 figura en farmacia antes de las 11" sí. Si lo recibe un agente, cada criterio dice quién lo comprueba: el agente, o la persona después.
 
+Cuando lo hace el asistente de esta carpeta, "Cuándo está terminado" cierra con dos criterios fijos: el procedimiento y su herramienta quedaron guardados donde dice `_rumbo.md`, con su fila en "Qué sabe hacer esta carpeta" del índice; y una sesión nueva atiende un caso de prueba con solo nombrarlo.
+
 Terminado cuando cada ticket cerrado está reflejado en alguna sección, cada criterio dice cómo se comprueba, y lo abierto figura en "Lo que no está decidido".
 
 ## 3. Leerlo como quien lo recibe
@@ -83,3 +85,5 @@ Terminado cuando la persona lo aprobó.
 ## 4. Cierre
 
 Si el plano salió sin supuestos, proponele pasar el `MAPA.md` a `Estado: cerrado. Plano entregado el <fecha>`. Si lleva supuestos, el mapa sigue `en curso` y la propuesta es `Estado: en curso. Borrador de plano el <fecha>, con <n> supuestos`. Con su sí, escribí esa línea. El envío lo hace ella, por el medio que use. Decile dónde está el plano.
+
+Si lo hace el asistente de esta carpeta, no hay envío: el siguiente paso es una sesión nueva acá, con "atendamos <el trabajo> con su plano". Al terminar, la carpeta lo guarda como dice su índice.

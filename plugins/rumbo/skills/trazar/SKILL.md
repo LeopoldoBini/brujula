@@ -25,6 +25,7 @@ Hablale en español rioplatense, de vos, en mensajes cortos, sin raya larga.
 El destino fija el alcance; se acuerda antes que nada. En la primera ronda (según `rondas.md`) va siempre esta pregunta: **dónde termina este mapa**.
 
 - **En un plano**: un pedido escrito para que otro (una persona o un agente) haga el trabajo. Recomendado cuando al final alguien tiene que construir o cambiar algo.
+- **En algo que la carpeta aprende**: un procedimiento, con su herramienta si hace falta, para que el asistente lo atienda de ahí en más en esta misma carpeta. Recomendado cuando es un trabajo propio que va a volver y nadie más tiene que construir nada. Lleva plano igual: lo recibe el asistente de esta carpeta.
 - **En algo más chico**: una decisión tomada, una comparación de opciones, un cuestionario respondido. Recomendado cuando lo que falta es decidir, no encargar.
 
 En la misma ronda: qué problema hay hoy y a quién le duele, quién pidió el trabajo, y un nombre corto para el tema (con la forma de "Nombres que viajan" de `carpeta.md`).
@@ -55,7 +56,7 @@ Terminado cuando cada asunto que salió está en uno de los tres lugares, y hay 
    ## Destino
 
    <Una o dos líneas: dónde termina el mapa.>
-   Termina en: <plano | la cosa más chica acordada>
+   Termina en: <plano | la carpeta lo aprende | la cosa más chica acordada>
 
    ## Notas
 
@@ -88,7 +89,7 @@ Mostrale el frente, cada ticket por su pregunta y con el skill que lo resuelve (
 2. **Anotar.** Por cada ticket cerrado que falta, una línea en "Decisiones hasta ahora": `- [<pregunta>](tickets/<archivo>): <la respuesta en una línea>`. Los cerrados como fuera de alcance van a "Fuera de alcance", no a decisiones.
 3. **Despejar niebla.** Con lo que ya se decidió, lo que ahora se puede preguntar con precisión pasa a ticket nuevo y se borra de la niebla. Lo que una respuesta dejó del otro lado del destino va a fuera de alcance, y si era un ticket abierto se cierra así. Los tickets que una decisión volvió inútiles o distintos se corrigen o se cierran, contándole a la persona por qué. Si una respuesta anotó preguntas que surgieron, cada una pasa a ticket o a niebla.
 4. **Ver si se llegó.** Con el frente y la niebla vacíos, el camino está despejado:
-   - Si termina en plano, el siguiente paso es `/rumbo:plano`.
+   - Si termina en plano, o en que la carpeta lo aprenda, el siguiente paso es `/rumbo:plano`.
    - Si termina en algo más chico, mostrale a la persona que el destino está cumplido y, con su sí, pasá el estado a `cerrado`.
 5. **Estado.** Reescribí la primera línea del mapa con el estado y el resumen al día.
 

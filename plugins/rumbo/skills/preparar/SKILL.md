@@ -55,7 +55,7 @@ El bloque es esto, con las líneas de `flujo.md` copiadas tal cual donde dice:
 <!-- rumbo:inicio -->
 ## rumbo
 
-Plugin instalado: un método para pasar de un pedido difuso a un pedido claro. Sus comandos corren solo si la persona los escribe. Cuando lo que pide encaja en una de estas líneas, sugerile el comando en una línea y esperá a que lo escriba:
+Plugin instalado: un método para que la carpeta de trabajo le enseñe al asistente lo que la persona hace, y para pasar de un pedido difuso a un pedido claro. Sus comandos corren solo si la persona los escribe. Cuando lo que pide encaja en una de estas líneas, sugerile el comando en una línea y esperá a que lo escriba:
 
 <las líneas de flujo.md>
 <!-- rumbo:fin -->

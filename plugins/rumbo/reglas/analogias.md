@@ -19,6 +19,10 @@ Sirven de punto de partida; si la persona trae una imagen propia de su trabajo, 
 |---|---|
 | carpeta de contexto | el bibliorato con índice que le dejás a tu reemplazo para que siga sin llamarte |
 | índice (`CLAUDE.md`) | la carátula del bibliorato: dice qué hay adentro y en qué solapa |
+| procedimiento | el instructivo del puesto: cómo se atiende un tipo de caso, paso a paso, para que lo siga cualquiera |
+| herramienta | un programa chico que el asistente usa por vos, como una calculadora hecha a medida para un trámite |
+| modelo | el formulario en blanco que se fotocopia para cada caso nuevo |
+| cajón | el cajón del escritorio: uno por tipo de trabajo, cada uno ordenado a su manera |
 | skill | un instructivo escrito que el asistente sigue paso a paso cuando lo llamás por su nombre |
 | plugin | una caja de instructivos que se instala de una vez y trae varios skills |
 | CLAUDE.md de usuario | el reglamento interno: las instrucciones que tu asistente lee siempre, en cualquier carpeta |

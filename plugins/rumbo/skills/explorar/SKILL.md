@@ -26,7 +26,7 @@ Cada dato tiene una **fuente primaria**: quien lo produce o lo rige.
 
 - Una norma o resolución: el boletín oficial o el sitio del organismo que la dictó.
 - Un producto o servicio: el catálogo, la ficha técnica o las condiciones del proveedor.
-- Cómo se hace algo en la organización: los documentos de la carpeta (`referencia/` primero) o lo que la persona tenga a mano.
+- Cómo se hace algo en la organización: los documentos de la carpeta (primero lo fijo: los procedimientos, reglas y modelos que nombra el índice) o lo que la persona tenga a mano.
 - Un número del trabajo (cantidades, tiempos, costos): la planilla o el registro de donde sale.
 
 Las fuentes de segunda mano (notas, blogs, resúmenes, foros) sirven para encontrar la primaria; si una afirmación se queda solo con una secundaria, se marca así. Seguí cada afirmación hasta la fuente que la sostiene.

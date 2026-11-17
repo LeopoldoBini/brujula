@@ -1,18 +1,19 @@
 ---
 name: reconocer
-description: Puerta de entrada. Arma tu carpeta de trabajo si está vacía, o la revisa y la ordena si ya tiene cosas.
+description: Puerta de entrada. Arma tu carpeta de trabajo si está vacía, o la revisa y la ordena si ya tiene cosas, con la forma de lo que vos hacés.
 disable-model-invocation: true
 ---
 
-Reconocer el terreno antes de caminarlo. La carpeta donde se abrió la sesión es el espacio de trabajo de una persona de gestión; este skill la deja lista para el resto de `rumbo`: con su índice, sus ajustes y una forma que cualquiera camina sin memoria.
+Reconocer el terreno antes de caminarlo. La carpeta donde se abrió la sesión es el espacio de trabajo de una persona de gestión; este skill la deja lista para que su asistente la use: con su índice, sus ajustes y **la forma de lo que esa persona hace**, que cualquiera camina sin memoria.
 
 Leé primero, siempre, las reglas compartidas:
 
-- `${CLAUDE_PLUGIN_ROOT}/reglas/carpeta.md`: la forma de la carpeta, los criterios y la prueba de la caminata. Es la vara de todo este skill.
-- `${CLAUDE_PLUGIN_ROOT}/reglas/flujo.md`: las líneas de "Cómo se trabaja acá" en el índice.
+- `${CLAUDE_PLUGIN_ROOT}/reglas/carpeta.md`: el núcleo fijo, los criterios y la prueba de la caminata. Es la vara de todo este skill.
+- `${CLAUDE_PLUGIN_ROOT}/reglas/formas.md`: las formas que puede tomar la parte propia y la pregunta que elige entre ellas.
+- `${CLAUDE_PLUGIN_ROOT}/reglas/crecer.md` y `${CLAUDE_PLUGIN_ROOT}/reglas/flujo.md`: las líneas de "Cómo crece esta carpeta" y "Cómo se trabaja acá" del índice.
 - `${CLAUDE_PLUGIN_ROOT}/reglas/analogias.md`: cómo se explica cada concepto técnico la primera vez.
 
-Hablale a la persona en español rioplatense, de vos, en mensajes cortos, sin raya larga.
+Hablale a la persona en español rioplatense, de vos, en mensajes cortos, sin raya larga. La forma se elige y se anota sin nombrársela: ella habla de su trabajo, vos de sus carpetas.
 
 ## 1. Mirar
 
@@ -30,29 +31,36 @@ Terminado cuando podés describir en dos líneas qué hay en la carpeta y a qué
 Una sola ronda de preguntas, numeradas. Donde haya una opción mejor, va tu recomendación para que alcance con un "sí"; las preguntas abiertas van sin recomendación:
 
 1. De qué se trata este espacio: el área, el tema o el puesto.
-2. Si tiene ahora un trabajo concreto entre manos, y cuál.
-3. El modo de tickets (ver paso 3), solo si `_rumbo.md` no lo tiene ya.
+2. Qué es lo que se repite: dos o tres cosas que le llegan o que hace seguido, y una contada de punta a punta.
+3. Si tiene ahora un trabajo concreto entre manos, y cuál.
+4. El modo de tickets (ver paso 3), solo si `_rumbo.md` no lo tiene ya.
 
-Con las respuestas, escribí `_rumbo.md` y `CLAUDE.md` según `carpeta.md`. Si había archivos sueltos, ubicalos con el mismo criterio que en 2B (mostrando la lista antes de mover). Las carpetas se crean solo si les toca algún archivo hoy; el trabajo que nombró la persona queda anotado en `CLAUDE.md` como próximo paso, y su carpeta la crea `trazar`.
+Con la respuesta 2, elegí la forma según `formas.md`. Si no alcanza para elegir, una pregunta más, en sus palabras. La carpeta arranca con **una** forma: la de lo que más le llega. Si nombró cosas de otro tipo, quedan anotadas en `_rumbo.md` como lo que también hace; su cajón aparece el día que atienda la primera. Después escribí, según `carpeta.md`:
 
-Terminado cuando existen `CLAUDE.md` y `_rumbo.md` con lo que dijo la persona, y no hay carpetas vacías.
+- `_rumbo.md`, con `forma` y la tabla "Dónde va cada cosa nueva": una fila por cada clase de cosa que nombró, con el lugar que le da la forma y un nombre de su oficina.
+- `CLAUDE.md`, con "Cómo crece esta carpeta" y "Cómo se trabaja acá" copiadas sin retocar.
+
+Si había archivos sueltos, ubicalos con el mismo criterio que en 2B (mostrando la lista antes de mover). Las carpetas se crean solo si les toca algún archivo hoy: en una carpeta vacía, la forma queda anotada en la tabla y se va armando con cada cosa que se atiende. El trabajo que nombró la persona queda anotado en `CLAUDE.md` como próximo paso, y su carpeta la crea `trazar`.
+
+Terminado cuando existen `CLAUDE.md` y `_rumbo.md` con lo que dijo la persona, `_rumbo.md` dice la forma y dónde va cada cosa que nombró, y no hay carpetas vacías.
 
 ## 2B. Revisar (carpeta con historia)
 
-1. **Inventario.** Cada archivo o carpeta de primer nivel, y lo que haya adentro que no se entienda por el nombre, en uno de estos papeles: *índice* (`CLAUDE.md` o lo que hace de índice), *referencia* (estable), *trabajo* (de un asunto puntual), *viejo* (sin uso, duplicado o reemplazado), *clave* (tiene contraseñas, tokens o datos de acceso). Leé lo suficiente para clasificar con fundamento, no por el nombre solo.
-2. **Contraste.** Pasá la carpeta por cada criterio de `carpeta.md` y por la prueba de la caminata. Cada incumplimiento es un hallazgo.
-3. **Devolución.** Mostrale a la persona, en este orden:
+1. **Inventario.** Cada archivo o carpeta de primer nivel, y lo que haya adentro que no se entienda por el nombre, en uno de estos papeles: *índice* (`CLAUDE.md` o lo que hace de índice), *fijo* (vale siempre: un procedimiento, un modelo, reglas, una herramienta), *de cada vez* (salió de un caso o de una corrida), *trabajo* (de un asunto puntual, con principio y fin), *viejo* (sin uso, duplicado o reemplazado), *clave* (tiene contraseñas, tokens o datos de acceso). Leé lo suficiente para clasificar con fundamento, no por el nombre solo.
+2. **La forma que ya tiene.** Una carpeta con historia casi siempre esconde una forma que creció sin esqueleto. Mirando el inventario, contestá para vos qué es lo que se repite acá y qué forma de `formas.md` le corresponde, y confirmalo con la persona en una pregunta, en sus palabras ("¿esto es una carpeta por cliente, y adentro siempre lo mismo?"). Se ordena hacia esa forma; cambiarla por otra se propone solo si la que tiene no carga el trabajo. Si adentro conviven asuntos de distinto tipo, la forma escondida es un centro de comando: cada asunto es un cajón con su propia forma ("Cajones" de `carpeta.md`, con su pregunta de quién más ve la carpeta).
+3. **Contraste.** Pasá la carpeta por cada criterio de `carpeta.md` y por la prueba de la caminata. Cada incumplimiento es un hallazgo.
+4. **Devolución.** Mostrale a la persona, en este orden:
    - Lo urgente primero, con su propio título: cualquier archivo con claves. Nombrá el archivo y qué tipo de dato tiene, **nunca el valor**, y proponé pasarlo al gestor de contraseñas.
-   - Qué falta (por ejemplo, el índice o los ajustes).
+   - Qué falta (por ejemplo, el índice, los ajustes, o un procedimiento que se usa y no figura en "Qué sabe hacer esta carpeta").
    - Qué arreglar: la lista `de → a → por qué → quién lo nombra`, armada con "Mover sin romper" de `carpeta.md`. Lo *viejo* va a `_archivo/`.
    - Lo que ya está bien, en una línea.
 
    Preguntá si arregla todo, una parte o nada. Si `_rumbo.md` no tiene el modo de tickets, sumá esa pregunta (paso 3) en la misma ronda.
-4. **Arreglo.** Aplicá solo lo aceptado: mové, actualizá los enlaces encontrados, escribí lo que faltaba. Los archivos con claves no se mueven ni se editan sin que la persona diga qué hacer con cada uno.
+5. **Arreglo.** Aplicá solo lo aceptado: mové, actualizá los enlaces encontrados, escribí lo que faltaba. `_rumbo.md` queda con la forma confirmada (y la de cada cajón, si los hay) y la tabla "Dónde va cada cosa nueva" al día. Los archivos con claves no se mueven ni se editan sin que la persona diga qué hacer con cada uno.
 
-Lo que se resolvió queda resuelto en los archivos mismos: un duplicado resuelto es un solo archivo vigente, sin nota aparte. A `_rumbo.md` va solo lo que la persona rechazó, para no volver a proponerlo.
+Lo que se resolvió queda resuelto en los archivos mismos: un duplicado resuelto es un solo archivo vigente, sin nota aparte. A `_rumbo.md` va además lo que la persona rechazó, para no volver a proponerlo.
 
-Terminado cuando cada hallazgo de la devolución quedó arreglado o rechazado, y cada rechazo está anotado en `_rumbo.md`.
+Terminado cuando cada hallazgo de la devolución quedó arreglado o rechazado, cada rechazo está anotado en `_rumbo.md`, y `_rumbo.md` dice la forma que la persona confirmó.
 
 ## 3. Modo de tickets
 
@@ -66,6 +74,6 @@ Terminado cuando `_rumbo.md` dice el modo, y en modo GitHub el repo existe, es p
 ## 4. Cierre
 
 1. Caminá la carpeta como alguien sin memoria, con la prueba de `carpeta.md`. Lo que falle, arreglalo antes de cerrar.
-2. Dale a la persona el árbol final en pocas líneas, qué cambió, y el siguiente paso: `/rumbo:trazar` para abrir un trabajo nuevo.
+2. Dale a la persona el árbol final en pocas líneas, qué cambió, y los dos caminos que siguen: para algo que le llega y se repite, abrir una sesión acá y decir "atendamos esto"; para una idea grande o confusa, `/rumbo:trazar`.
 
 Terminado cuando la prueba de la caminata pasa entera y la persona tiene el árbol y el siguiente paso.

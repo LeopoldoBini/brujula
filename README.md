@@ -1,10 +1,24 @@
 # brújula
 
-Un método de trabajo con IA para gente de gestión y administración. Sirve para pasar de un pedido difuso ("hay que ordenar las compras") a un pedido claro que otra persona, o un agente, puede tomar y hacer sin volver a preguntar.
+Un método de trabajo con IA para gente de gestión y administración. Sirve para dos cosas: que tu carpeta de trabajo le enseñe a tu Claude lo que vos hacés, y pasar de un pedido difuso ("hay que ordenar las compras") a un pedido claro que otra persona, o un agente, puede tomar y hacer sin volver a preguntar.
 
 ## El plugin `rumbo`
 
-El recorrido completo, de izquierda a derecha:
+### Tu carpeta es tu asistente
+
+Claude no se acuerda de nada: cada vez que abrís una sesión, lee tu carpeta. Lo que está escrito ahí es lo que sabe hacer. `/rumbo:reconocer` arma la carpeta con la forma de tu trabajo (no hay una estructura única: se ordena distinto si atendés casos, si llevás clientes o si armás un informe todas las semanas), y de ahí en más la carpeta crece sola:
+
+```
+reconocer (una vez)  ->  "Atendamos esto: ..."  ->  Claude ofrece dejarlo escrito  ->  "Atendamos tal cosa"
+                          la primera vez, juntos     procedimiento, herramienta          de ahí en más, ya sabe
+                                                     y su línea en el índice
+```
+
+No hace falta ningún comando para eso: son frases. El índice de la carpeta le dice a Claude que busque primero si ya sabe atender lo que llega, que ofrezca guardar lo nuevo, y que no guarde ni mueva nada sin mostrarte qué y dónde. Si un día atendés algo de otro tipo, te propone abrirle su propio cajón, y la carpeta de siempre queda como centro de comando.
+
+### De la idea confusa al pedido claro
+
+Para lo que no es un caso sino un proyecto, el recorrido completo, de izquierda a derecha:
 
 ```
 preparar (una vez)  ->  reconocer  ->  trazar  ->  plano
@@ -16,14 +30,14 @@ preparar (una vez)  ->  reconocer  ->  trazar  ->  plano
 | Skill | Qué hace |
 |---|---|
 | `/rumbo:preparar` | Lo primero después de instalar: revisa lo que ya tenés, te ofrece sacar lo que se superpone y le enseña a tu Claude cuándo sugerirte cada comando |
-| `/rumbo:reconocer` | Arma tu carpeta de trabajo, o la revisa y la ordena |
+| `/rumbo:reconocer` | Arma tu carpeta de trabajo con la forma de lo que hacés, o la revisa y la ordena |
 | `/rumbo:trazar` | Convierte una idea confusa en un mapa: qué hay que resolver y en qué orden. Llamado de nuevo, pasa al mapa lo resuelto y te dice qué sigue |
 | `/rumbo:preguntar` | Te hace las preguntas justas, cada una con una respuesta recomendada, y deja las decisiones escritas. También arma un cuestionario para otra persona |
 | `/rumbo:explorar` | Averigua un dato que hace falta y lo deja escrito con sus fuentes |
 | `/rumbo:maqueta` | Arma un borrador descartable (pantalla, circuito o planilla) para ver si la idea cierra |
 | `/rumbo:plano` | Escribe el pedido final para quien lo va a hacer, con criterios para saber cuándo está terminado |
 
-El recorrido termina en el plano: hacer el trabajo queda afuera de esta versión.
+El recorrido termina en el plano. El plano puede ser para otra persona, para un agente, o para tu propio Claude en tu carpeta: en ese caso lo hace ahí mismo y la carpeta se queda con el procedimiento.
 
 Ningún skill se activa solo: corren únicamente cuando los llamás por su nombre. `/rumbo:preparar` deja escrito en tus instrucciones generales cuándo conviene cada uno, así tu Claude te lo sugiere.
 

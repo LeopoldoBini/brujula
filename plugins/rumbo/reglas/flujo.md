@@ -10,4 +10,5 @@ Regla compartida por `preparar` y `reconocer`. Son las líneas que le dicen a Cl
 - Dato que falta (una norma, un proveedor, cómo lo hacen otros): `/rumbo:explorar` lo averigua con fuentes.
 - Ver si una idea cierra (una pantalla, un circuito, una planilla): `/rumbo:maqueta` arma un borrador descartable.
 - Mapa despejado: `/rumbo:plano` escribe el pedido final para quien hace el trabajo.
+- Algo para atender ("atendamos tal cosa") o algo aprendido para guardar ("dejá escrito cómo lo hicimos"): son frases, no comandos. Seguí "Cómo crece esta carpeta" del índice de la carpeta; si la carpeta no tiene índice, `/rumbo:reconocer` primero.
 ```
